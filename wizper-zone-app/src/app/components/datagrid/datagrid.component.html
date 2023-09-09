@@ -3,13 +3,9 @@
 <div class="controls">
   <div class="filter">
     <input type="text" [(ngModel)]="searchText" (input)="applySearchFilter()" placeholder="Search by name" />
-    <button (click)="toggleSortOrder()">Sort by Name</button>
+    <button (click)="toggleSortOrder()">Name <i class="fas fa-sort"></i></button>
   </div>
-
-  <button (click)="refreshData()" class="refresh-button">
-    Refresh Data
-    <i class="fas fa-sync-alt"></i>
-  </button>
+  <i class="fas fa-sync-alt refresh-button" (click)="refreshData()"></i>
 </div>
 
 <div class="card-container" >

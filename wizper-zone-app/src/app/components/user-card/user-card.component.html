@@ -1,8 +1,12 @@
 <div class="card">
     <img [src]="imageUrl" alt="User Image"  img-responsive="true" />
+    <span>
+        <span [ngClass]="{'red': inputData.status === 'inactive', 'green': inputData.status === 'active'}"></span>
+    </span>
     <div>
-        <span>{{inputData.name}} </span>
-        <span>{{inputData.email}} </span>
-        <span>1234 posts</span>
+        <span class="bold-text">{{ inputData.name }}</span>
+        <span class="light-grey-text">#{{ inputData.id }}</span>
+        <span class="light-grey-text">{{ inputData.email }}</span>
+        <span class="light-grey-text">{{ inputData.posts }} posts</span>
     </div>
 </div>
