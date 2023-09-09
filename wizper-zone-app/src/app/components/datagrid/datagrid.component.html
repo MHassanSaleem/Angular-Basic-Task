@@ -1,0 +1,23 @@
+
+  <!-- search, sorting and refresh component-->
+<div class="controls">
+  <div class="filter">
+    <input type="text" [(ngModel)]="searchText" (input)="applySearchFilter()" placeholder="Search by name" />
+    <button (click)="toggleSortOrder()">Sort by Name</button>
+  </div>
+
+  <button (click)="refreshData()" class="refresh-button">
+    Refresh Data
+    <i class="fas fa-sync-alt"></i>
+  </button>
+</div>
+
+<div class="card-container" >
+  <div *ngFor="let user of filteredData | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
+      <app-user-card [inputData]="user"></app-user-card>
+  </div>
+</div>
+
+<div class="pagination-container">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
