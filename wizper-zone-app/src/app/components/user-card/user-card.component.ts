@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from '../../services/data.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,11 @@ export class UserCardComponent implements OnInit {
 
   @Input() inputData: any; //Define an Input property named inputData
   imageUrl: string = '';
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, private router: Router) { }
+
+  onCardClick(userId: number) {
+    this.router.navigate(['/user', userId]); // Navigate to the user details view with the user's ID as a parameter
+  }
 
   ngOnInit(): void {
     this.dataService.fetchData().subscribe((response) => {

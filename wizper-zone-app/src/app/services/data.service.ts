@@ -18,4 +18,11 @@ export class DataService {
     const url = `https://gorest.co.in/public/v2/users/${Id}/posts`;
     return this.http.get(url);
   }
+
+
+  getUserDetails(Id: number): Observable<any> {
+    const url = `https://gorest.co.in/public/v2/users/${Id}`;
+    return this.http.get<any[]>(url);
+  }
+
 }

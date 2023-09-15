@@ -10,7 +10,9 @@
 
 <div class="card-container" >
   <div *ngFor="let user of filteredData | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
+    <a [routerLink]="['/user', user.id]">
       <app-user-card [inputData]="user"></app-user-card>
+    </a>
   </div>
 </div>
 

@@ -13,12 +13,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserCardComponent } from './components/user-card/user-card.component';
 import { DataGridComponent } from './components/datagrid/datagrid.component';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserCardComponent,
-    DataGridComponent
+    DataGridComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
