@@ -1,10 +1,14 @@
-<div>
-    <h2>User Details</h2>
-    <p>Name: {{ userDetails?.name }}</p>
-    <p>Name: {{ userDetails?.name }}</p>
-    <p>Age: {{ userDetails?.name }}</p>
-  
+<div class="user-details-content">
+  <span [routerLink]="['/']"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+  <img [src]="imageUrl" alt="User Image"  img-responsive="true" class="detail-img"/>
+  <div>
+    <h3>User Details</h3>
+    <p>First name: {{ firstName }}</p>
+    <p>Last name: {{ lastName }}</p>
+    <hr>
     <h3>Posts:</h3>
-    <ul>
+    <ul *ngFor="let posts of postData" class="posts-title">
+      <li><span><b>Title: </b></span> <p class="title-text">{{posts.title}}</p></li>
     </ul>
   </div>
+</div>

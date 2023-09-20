@@ -1,19 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { PaginationInstance, PaginationService } from 'ngx-pagination';
-import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-datagrid',
   templateUrl: './datagrid.component.html',
-  styleUrls: ['./datagrid.component.less'] ,
-  animations: [
-    trigger('spin', [
-      state('spin-in', style({ transform: 'rotate(0deg)' })),
-      state('spin-out', style({ transform: 'rotate(360deg)' })),
-      transition('spin-in => spin-out', animate('500ms ease-out')),
-    ]),
-  ],
+  styleUrls: ['./datagrid.component.less'] 
 })
 export class DataGridComponent implements OnInit {
   data: any[] = [];  
@@ -22,8 +14,6 @@ export class DataGridComponent implements OnInit {
   sortOrder: 'asc' | 'desc' = 'asc';
   p: number = 1; // Current page
   itemsPerPage: number = 3;
-
-  animationState: string = 'spin-in';
 
   filteredData: any[] = []; // Initialize an array to store filtered data
 

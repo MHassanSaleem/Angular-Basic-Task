@@ -13,8 +13,8 @@ export class DataService {
     return this.http.get<any[]>('https://gorest.co.in/public/v2/users');
   }
 
-   // Fetch the number of posts for a specific user
-   getUserPosts(Id: number): Observable<any> {
+  // Fetch posts for a specific user
+  getUserPosts(Id: number): Observable<any> {
     const url = `https://gorest.co.in/public/v2/users/${Id}/posts`;
     return this.http.get(url);
   }

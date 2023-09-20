@@ -1,19 +1,23 @@
 .card {
-    all: unset;
-    border-radius: 15px;
-    border: 1px solid #eee;
-    background-color: #fafafa;
-    width: 280px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: left;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow effect */
+  all: unset;
+  border-radius: 15px;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  width: 280px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); // Box shadow effect
+
+  &:hover {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.845); // Box shadow effect
   }
-  .card>div {
+
+  > div {
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -21,53 +25,55 @@
     align-items: left;
     line-height: 24px;
   }
-  .card>img{
-      border-radius: 15px 15px 0 0;
-      max-width: 100%;
-      height: auto;
-      width: 280px;
+
+  > img {
+    border-radius: 15px 15px 0 0;
+    max-width: 100%;
+    height: auto;
+    width: 280px;
   }
 
-  .card>span{
+  > span {
     height: 20px;
     position: absolute;
     margin: 10px 10px;
+  }
 }
 
-  .green {
-    background-color: green;
-    width: 10px;
-    height:10px;
-    border-radius: 50%;
-    display: inline-block;
-  }
+.green {
+  background-color: green;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
 
-  .red {
-    background-color: red;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    display: inline-block;
-  }
+.red {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
 
-  .t-green {
-    margin-left: 5px;
-    color: green;
-  }
+.t-green {
+  margin-left: 5px;
+  color: green;
+}
 
-  .t-red {
-    text-align: right;
-    margin-left: 5px;
-    color: red;
-  }
+.t-red {
+  text-align: right;
+  margin-left: 5px;
+  color: red;
+}
 
-  .bold-text {
-    font-weight: bold;
-    font-size: 1.0em;
-  }
-  
-  /* Define a class for the light grey text */
-  .light-grey-text {
-    color: lightgrey;
-    font-size: 0.8em;
-  }
+.bold-text {
+  font-weight: bold;
+  font-size: 1.0em;
+}
+
+/* Define a class for the light grey text */
+.light-grey-text {
+  color: lightgrey;
+  font-size: 0.8em;
+}
